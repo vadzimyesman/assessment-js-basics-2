@@ -31,6 +31,14 @@
 */
 
 //CODE HERE
+const pizza = {
+    name : "Hawaiian",
+    price : 20,
+    category: "entree",
+    popularity: 5,
+    rating: 5,
+    tags: ["gluten-free","kids"]
+}
 
 
 
@@ -43,6 +51,7 @@
 */
 
 //CODE HERE
+console.log (pizza.popularity)
 
 
 /*
@@ -53,6 +62,7 @@
 */
 
 //CODE HERE
+console.log(pizza.tags[1])
 
 
 /*
@@ -63,6 +73,8 @@
 */
 
 //CODE HERE
+let {price:priceVeriable}=pizza
+console.log(priceVeriable)
 
 
 /*
@@ -73,6 +85,9 @@
 */
 
 //CODE HERE
+let {category:categoryVeriable}=pizza
+console.log(categoryVeriable)
+
 
 
 //////////////////PROBLEM 3////////////////////
@@ -86,8 +101,57 @@
     tags. That way, you'll be able to use this
     data in some functions that you'll write.
 */
-
+//let empTwo = {...empOne}
+//console.log(empTwo)
 //CODE HERE
+const foodArr = [
+    {
+        name : "Hawaiian",
+        price : 20,
+        category: "entree",
+        popularity: 5,
+        rating: 5,
+        tags: ["gluten-free","kids"]
+    }
+,
+{
+    name : "Traditional",
+    price : 22,
+    category: "entree",
+    popularity: 4,
+    rating: 5,
+    tags: ["extra calories","thick crust"]
+}
+,
+{
+    name : "Mexican",
+    price : 20,
+    category: "entree",
+    popularity: 5,
+    rating: 4,
+    tags: ["gluten-free","white souse"]
+}
+,
+{
+    name : "Italiano",
+    price : 24,
+    category: "entree",
+    popularity: 5,
+    rating: 5,
+    tags: ["gluten-free","kids"]
+}
+,
+{
+    name : "Vegeterian",
+    price : 25,
+    category: "entree",
+    popularity: 5,
+    rating: 5,
+    tags: ["Vegan","kids"]
+}
+
+
+]
 
 
 
@@ -105,7 +169,12 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+
+ const filteredFood = foodArr.filter(function(object){
+     return object.tags.includes("kids")
+ })
+
+ console.log (filteredFood)
 
 
 
@@ -149,6 +218,15 @@
 */
 
 //CODE HERE
+/*
+const filterByProperty = (property,number,type)={
+    
+ 
+foodArr.filter(function(object){
+    return object.tags.includes("kids")
+})
+
+console.log (filteredFood)
 
 
 /*
