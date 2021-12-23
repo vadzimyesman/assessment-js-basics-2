@@ -96,18 +96,7 @@ console.log(empTwo)
     The function should push the name into 
     the employees array. 
 */
-/*class Vehicle{
-    constructor(capacity,color,mileage){
-      this.capacity=capacity,
-      this.color=color,
-      this.mileage=mileage
-    }
-    move(miles){
-      this.mileage+=miles
-      console.log(`Updated mileage is ${this.mileage}`)
-    }
-  }
-  */
+
 
 //CODE HERE
 class Manager extends Employee{
@@ -120,8 +109,8 @@ class Manager extends Employee{
     }
     addEmployee(emp){
                 
-        this.employees.push(emp)
-        console.log(this.employees)
+        //this.employees.push(emp)
+        console.log(`${this.employees} and ${emp}`)
     }
     
 }
