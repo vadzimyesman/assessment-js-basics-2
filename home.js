@@ -52,15 +52,15 @@ greetUser("Andrew")
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-const canWeDeliver=(zipcide)=>{
-    if (deliveryAreaZipCodes.includes(zipcide)){
+const canWeDeliver=(zipCode)=>{
+    if (deliveryAreaZipCodes.includes(zipCode)){
         console.log(`You're in our delivery zone!`)
     } else{
         console.log(`Sorry, we can't deliver to that address`)
     }
 }
 
-canWeDeliver(84606) 
+canWeDeliver(84666) 
 canWeDeliver(85205) 
 
 /* 
@@ -81,9 +81,9 @@ canWeDeliver(85205)
 */
 
 // CODE HERE
-const canWeDeliverTwo =(zipcode)=>{
+const canWeDeliverTwo = (zipCode)=>{
     for (i=0;i<deliveryAreaZipCodes.length;i++){
-        if(deliveryAreaZipCodes[i]===zipcode){
+        if(deliveryAreaZipCodes[i]===zipCode){
             return console.log(`You're in our delivery zone!`)
         } 
             
@@ -92,8 +92,28 @@ const canWeDeliverTwo =(zipcode)=>{
     console.log(`Sorry, we can't deliver to that address`)
 }
 canWeDeliverTwo(84606) 
-canWeDeliverTwo(85205) 
+canWeDeliverTwo(85205)
 
+
+
+
+
+const canWeDeliverThree = (zipCode) => {
+    let i=0
+    deliveryAreaZipCodes.forEach(function(object){
+        if (object===zipCode){
+            i+=1
+            return console.log(`You're in our delivery zone!`)
+        } 
+    })
+
+    if (i===0){
+        console.log(`Sorry, we can't deliver to that address`)
+    }
+}
+
+canWeDeliverThree(84606) 
+canWeDeliverThree(85205)
 
 
 
@@ -131,12 +151,15 @@ const deals = [
 */
 
 //CODE HERE
-console.log(deals[0])
-const firstDeal = deals[0]
-const currValue = firstDeal["title"]
-console.log(currValue)
-const  newValue = currValue.replace("15","10")
-console.log(newValue)
+//console.log(deals[0])
+//const firstDeal = deals[0]
+//const currValue = firstDeal["title"]
+//console.log(currValue)
+//const  newValue = currValue.replace("15","10")
+//onsole.log(newValue)
+const firstUpdatedTitle = deals[0].title.replace("15","10")
+console.log(firstUpdatedTitle)
+
 
 
 
@@ -157,9 +180,10 @@ console.log(newValue)
 */
 
 //CODE HERE
-const secondDeal = deals[1]
-const currDeadline = secondDeal["desc"]
-const newDeadline = currDeadline.replace("March", "April")
-const removeWhiteSPaces = newDeadline.replace("   ","")
-console.log(removeWhiteSPaces)
-
+//const secondDeal = deals[1]
+//const currDeadline = secondDeal["desc"]
+//const newDeadline = currDeadline.replace("March", "April")
+//const removeWhiteSPaces = newDeadline.replace("   ","")
+//console.log(removeWhiteSPaces)
+const secondUpdatedDesc = deals[1].desc.replace("March", "April").replace("   ","")
+console.log(secondUpdatedDesc)

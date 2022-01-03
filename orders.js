@@ -30,6 +30,21 @@
 */
 
 //CODE HERE
+class Ticket{
+    constructor(items, orderTime, customerId){
+        this.items = items,
+        this.orderTime = orderTime,
+        this.customerId = customerId
+        this.status = "queued"
+    }
+    updateStatus(newStatus){
+        if (newStatus != undefined){
+            this.status = newStatus
+        } 
+
+        console.log(`The ${this.items} for customer ${this.customerId} is now ${this.status}, order was placed at ${this.orderTime}`)
+    }
+}
 
 
 
@@ -45,6 +60,12 @@
 */
 
 //CODE HERE
+const firstTicket = new Ticket("pizza, bread and soda","7:03 PM",575)
+const secondTicket = new Ticket ("hot dogs, fries and lemonade","7:10 PM", 666) 
+const thirdTicket = new Ticket ("wings, salad and beer", "7:25 PM", 688)
+
+
+
 
 
 /*
@@ -54,3 +75,7 @@
 */
 
 //CODE HERE
+firstTicket.updateStatus("cooking")
+secondTicket.updateStatus("serving")
+thirdTicket.updateStatus()
+

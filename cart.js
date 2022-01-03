@@ -39,7 +39,7 @@ const cart = [
  
     return acc + curr.price
   },0)
- console.log(summedPrice)
+ console.log(`Total price is ${summedPrice}`)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -61,7 +61,7 @@ const cart = [
 const calcFinalPrice = (cartTotal,couponValue,tax)=>{
     return cartTotal*(1+tax)-couponValue
 }
-console.log(calcFinalPrice(100,10,0.08))
+console.log(`After taxes and aplied coupon due is: ${calcFinalPrice(100,10,0.08)}`)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -86,11 +86,11 @@ console.log(calcFinalPrice(100,10,0.08))
 
 /*
     TEXT ANSWER HERE
-name: "Customer's name"  //the best way is to idenitefy customers id by their name. string, because it will be a text.
-age: Age written as a number//knowing age helps us to pick products for the customer. number, because it is age.
-phoneNumber: "number as a string"//In case we need to reach the customer. Sting, because it most likely will not change.
+name: "Customer's name"  //the best way is to identify customers is by their name. string, because it will be a text.
+age: Age written as a number//knowing age helps us to pick products for the customer. number, because it is an age and will be changed each year.
+phoneNumber: "number as a string"//In case we need to reach the customer. string, because it most likely will not change.
 email: "email as a string"//To notify about updates. String, because won't change most likely.
-goodCustomer: true or false statement//For us to know if this customer caused problems previously. Boolean,because eithe good or not.
+goodCustomer: true or false statement//For us to know if this customer caused problems previously. Boolean,because either good or not.
 */
 
 /*
@@ -103,5 +103,6 @@ const customer = {
     name: "John Frise",
     age: 35,
     phoneNumber: "7072252385",
-    emailAddress: "johnfrise@gmail.com"
+    emailAddress: "johnfrise@gmail.com",
+    goodCustomer: true
 }

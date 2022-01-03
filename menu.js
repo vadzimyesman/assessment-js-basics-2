@@ -73,7 +73,7 @@ console.log(pizza.tags[1])
 */
 
 //CODE HERE
-let {price:priceVeriable}=pizza
+let {price:priceVeriable} = pizza
 console.log(priceVeriable)
 
 
@@ -119,7 +119,7 @@ const foodArr = [
     price : 22,
     category: "entree",
     popularity: 4,
-    rating: 5,
+    rating: 3,
     tags: ["extra calories","thick crust"]
 }
 ,
@@ -137,7 +137,7 @@ const foodArr = [
     price : 24,
     category: "entree",
     popularity: 5,
-    rating: 5,
+    rating: 3,
     tags: ["gluten-free","kids"]
 }
 ,
@@ -145,7 +145,7 @@ const foodArr = [
     name : "Vegeterian",
     price : 25,
     category: "entree",
-    popularity: 5,
+    popularity: 3,
     rating: 5,
     tags: ["Vegan","kids"]
 }
@@ -174,7 +174,7 @@ const foodArr = [
      return object.tags.includes("kids")
  })
 
- console.log (filteredFood)
+ //console.log (filteredFood)
 
 
 
@@ -218,15 +218,28 @@ const foodArr = [
 */
 
 //CODE HERE
-/*
-const filterByProperty = (property,number,type)={
+
+const filterByProperty = (property,number,type)=>{
     
  
-foodArr.filter(function(object){
-    return object.tags.includes("kids")
+let arrByProperty = foodArr.filter(function(object){
+
+    if (type==="above"){
+        return object[property] > number
+    } else {
+        return object[property] < number
+    }                              
+    
 })
 
-console.log (filteredFood)
+return arrByProperty
+
+
+}
+
+
+
+
 
 
 /*
@@ -237,3 +250,5 @@ console.log (filteredFood)
 */
 
 //CODE HERE
+
+console.log(filterByProperty("rating",5,"less" ))
